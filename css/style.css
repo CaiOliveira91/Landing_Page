@@ -1,0 +1,275 @@
+/*IMPORT FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Orbitron:wght@400;600&display=swap');
+
+@import url(home.css);
+@import url(sobre.css);
+@import url(portfolio.css);
+@import url(contato.css);
+
+/*BODY*/
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-family: 'orbitron',sans-serif;
+    overflow-y: hidden;
+}
+
+.suspenso{
+    position: fixed;
+    margin-top: 10px;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    z-index: 99;
+}
+
+.suspenso .logo{
+    margin-left: 60px;
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+.suspenso .btns{
+    margin-right: 50px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.suspenso .btns .sup{
+    width: 60%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.suspenso .btns .sup a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.suspenso .btns .sup a:hover{
+    color: gray ;
+    transition: 1s;
+}
+
+.suspenso .btns .btn_menu{
+    position: fixed;
+    top: 5.5%;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn_menu:after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    margin-left: 5px;
+    width: 50px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.btn_menu:before{
+    content: '';
+    position: absolute;
+    top: 60%;
+    width: 30px;
+    margin-left: 25px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+#hamburg:checked ~ label .btn_menu::after{
+    transform: rotate(225deg);
+    top: 45%;
+    width: 50px;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+#hamburg:checked ~ label .btn_menu::before{
+    transform: rotate(-225deg);
+    width: 50px;
+    top: 45%;
+    right: 10%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.lateral{
+    position: fixed;
+    width: 50px;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 3%;
+    top: 35%;
+    z-index: 99;
+}
+
+.lateral button{
+    background: rgb(0, 0, 0);
+}
+
+.lateral .up ion-icon{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.lateral .Menu_lateral{
+    width: 50px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.lateral .Menu_lateral .ponto{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: rgba(202, 10, 10, 0);
+    border: 2px solid rgb(255, 255, 255);
+    align-items: center;
+}
+
+.lateral .Menu_lateral .ponto a{
+    width: 30px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    font-size: 5px;
+}
+
+.lateral .down ion-icon{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.redes_sociais{
+    position: fixed;
+    width: 15%;
+    height: 50px;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+}
+
+.redes_sociais .social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.redes_sociais .social .link_social{
+    font-size: 30px;
+}
+
+.link_social ion-icon:hover{
+    color: grey;
+    transition: 1s;
+}
+
+#home{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+
+.fundoOne{
+    width: 800px;
+    height: 600px;
+    background: url(/01.jpg) center no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+    transform: rotate(180deg);
+    position: absolute;
+    left: 19.5%;
+    overflow: hidden;
+}
+
+
+.fundoTwo{
+    width: 800px;
+    height: 600px;
+    background: url(/03.jpg);
+    background-size: cover;
+    clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+    position: absolute;
+    left: 43%;
+    overflow: hidden;
+}
+
+
+.fundoThree{
+    width: 800px;
+    height: 600px;
+    background: url(/nsplsh_6fd6c6a0a11047bdb4aa697b810cbe17_mv2.jpg) center no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 100%, 50% 0%, 0% 100%);
+    position: absolute;
+    transform: rotate(180deg);
+    left: 43%;
+    top: 65%;
+    overflow: hidden;
+}
+
+.TextHome{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    top: 20%;
+    text-align: end;
+}
+
+.text_home2{
+    font-size: 30px;
+}
+
+.text_home1{
+    font-size: 60px;
+}
+
+.TextHome img{
+    position: fixed;
+    left: 5%;
+    top: 45%;
+    width: 40%;
+}
+
+.TextHome .rotate{
+    animation: rotare 5s linear infinite;
+}
+
+@keyframes rotare {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
